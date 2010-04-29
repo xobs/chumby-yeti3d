@@ -1,0 +1,186 @@
+ABS
+AFFINE_CASE
+AFFINE_LOOP
+CELL_IS_MARKED
+CELL_IS_SOLID
+CELL_MARK
+CELL_SWI_CAVE
+CELL_SWI_CORNER
+CELL_SWI_LIGHT
+CELL_SWI_LUA_0
+CELL_SWI_LUA_1
+CELL_SWI_LUA_2
+CELL_SWI_LUA_3
+CELL_SWI_LUA_MASK
+CELL_SWI_RESERVED
+CELL_SWI_SOLID
+CELL_SWI_TERRAIN
+CELL_UNMARK
+CELL_UNMARK_ALL
+CLAMP
+CLEARMEM
+CODE_IN_IWRAM
+CODE_IN_ROM
+ENTITY_SWI_NO_COLLISION_RESPONSE
+FALSE
+FIXCEIL
+FIXHALF
+FIXONE
+FONT_HEIGHT
+FONT_WIDTH
+IN_EWRAM
+IN_IWRAM
+MAX
+MIN
+Quad_t
+RGB_BLEND
+RGB_BLEND_MASK
+RGB_BLUE
+RGB_GREEN
+RGB_MAX
+RGB_RED
+RGB_SET
+RGB_WHITE
+TRUE
+YETI_BULLET
+YETI_BULLET_MAX
+YETI_CELL_MAX
+YETI_CONSTANT_LIGHT
+YETI_ENTITY_MAX
+YETI_LIGHT_MAX
+YETI_LIGHT_MIN
+YETI_LOW_QUALITY_WALLS
+YETI_MAP_HEIGHT
+YETI_MAP_WIDTH
+YETI_POLYGON_MAX
+YETI_RAY_MAX
+YETI_RAY_QUALITY
+YETI_RECIPROCAL_MAX
+YETI_RECIPROCAL_MIN
+YETI_RGB444
+YETI_RGB555
+YETI_RGB565
+YETI_ROM
+YETI_SINTABLE_MAX
+YETI_SPRITE_MAX
+YETI_STR_CAPTION
+YETI_STR_COPYRIGHT
+YETI_STR_TITLE
+YETI_STR_URL
+YETI_STR_VERSION
+YETI_TEXGEN_BASIC
+YETI_TEXGEN_FLAT
+YETI_TEXGEN_WALL_FB
+YETI_TEXGEN_WALL_LR
+YETI_TEXTURE_LAVA
+YETI_TEXTURE_MAX
+YETI_TEXTURE_SKY
+YETI_TEXTURE_WATER
+YETI_TEXTURE_WINDOW
+YETI_TRIANGLE_BUCKET_MAX
+YETI_VCACHE_MAX
+YETI_VERTEX
+YETI_VIDEO_LUT
+YETI_VIEWPORT_HEIGHT
+YETI_VIEWPORT_INTERVAL
+YETI_VIEWPORT_INTERVAL_ERROR
+YETI_VIEWPORT_WIDTH
+YETI_VIEWPORT_X1
+YETI_VIEWPORT_X2
+YETI_VIEWPORT_Y1
+YETI_VIEWPORT_Y2
+YETI_VPOOL_MAX
+byte
+cell_t
+color_t
+draw_clipped_poly(yeti_t* yeti, polyclip_t src, int n, int tid)
+draw_poly(vertex_t* p, int n, YETI_ROM texture_t texture, framebuffer_t* dst, lua_t lua)
+draw_sprite_di(yeti_t* yeti, int x1, int y1, int x2, int y2, int z, YETI_ROM sprite_t sprite, int mode)
+draw_texture(yeti_t* yeti, polyclip_t src, int n, int tid)
+entity_behaviour_t
+entity_motion(entity_t* e)
+entity_t
+entity_t
+entity_visual_t
+f2fl
+f2i
+fixcos
+fixdiv
+fixinv
+fixlerp
+fixmul
+fixsin
+fixtrunc
+fixup
+fl2f
+fontchar_t
+frame_t
+framebuffer_t
+game_draw(yeti_t* yeti)
+game_init(yeti_t* yeti)
+game_loop(yeti_t* yeti)
+game_t
+game_tick(yeti_t* yeti)
+i2f
+i2fdiv2
+intdiv
+keyboard_t
+lighting_t
+lua_t
+lut_t
+matrix_rotate_object(matrx_t m, int alp, int bet, int gam)
+matrix_rotate_world(matrx_t m, int alp, int bet, int gam)
+matrx_t
+md2_draw(entity_t* e)
+md2command_t
+model_t
+muldiv
+palette_overbright(palette_t dst, palette_t src, int brightness)
+palette_t
+polyclip_t
+polygon_clip(yeti_t* yeti, vertex_t** dst, vertex_t** src, int n)
+polygon_t
+r2i
+rgb555_t
+rom_cell_t
+rom_map_t
+s16
+s32
+s8
+skin_t
+sprite_height
+sprite_pixel
+sprite_t
+sprite_width
+stretch_sprite_di(yeti_t* yeti, int x1, int y1, int x2, int y2, int z, YETI_ROM sprite_t sprite, int u1, int v1, int u2, int v2, int mode)
+surface_t
+textureCoordinate_t
+texture_t
+triangleVertex_t
+triangle_t
+u16
+u32
+u8
+vec2_t
+vec3_t
+vertex_project(vertex_t* v)
+vertex_t
+video_lut_t
+viewport_t
+viewport_to_video(rgb555_t* video, int pitch, viewport_t* vp, int rmask, int gmask, int bmask)
+yeti_clear_entities(yeti_t* yeti)
+yeti_default_lighting(yeti_t* yeti)
+yeti_draw(yeti_t* yeti)
+yeti_entity(yeti_t* yeti, int x, int y, int z, entity_behaviour_t behaviour)
+yeti_init(yeti_t* yeti, framebuffer_t* front, framebuffer_t* back, texture_t* textures, palette_t palette, lua_t lua)
+yeti_init_map(yeti_t* yeti)
+yeti_light(yeti_t* yeti, int lightx, int lighty)
+yeti_load_file(char* filename)
+yeti_load_map(yeti_t* yeti, rom_map_t* map)
+yeti_memcpy(void* d, void* s, unsigned n)
+yeti_memset(void *s, int c, unsigned n)
+yeti_putc(int x, int c)
+yeti_puts(int x, char* s)
+yeti_save_map(yeti_t* yeti, rom_map_t* map)
+yeti_t
+yeti_tick(yeti_t* yeti)

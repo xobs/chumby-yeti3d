@@ -1,0 +1,40 @@
+CREDITS:
+Derek J. Evans - Yeti3D engine and map editor
+Gazin Mattieu(ThunderZ) - GP32 port of Yeti3D engine and modified map editor
+Vortexx - Dreamcast port of Yeti3D engine
+OneThirty8 - SDL example
+Sam Lantinga - Simple Directmedia Layer
+synkro - fixes for gp2x port
+
+== synkro's Notes ==
+
+I just took OneThirty8's SDL dreamcast port and stripped it down to hopefully run on the upcoming GP2X. If you just want to work with the egine under SDL, then download his src and tools. He did a good job! This package is for gp2x only, because I removed all the other things not needed.
+
+== OneThirty8's Notes ==
+
+In the OpenGL demo and the DirectDraw demo, the controls are slightly different than in this SDL version.  This was because SDLK_RCTRL didn't seem to work on OS X.  So, if you're compiling for Windows or DC, you should be able to change it back to the Control button for firing a bullet.
+
+Controls are mapped as follows:
+UP	= move forward
+DOWN	= move backward
+LEFT    = turn left
+RIGHT 	= turn right
+ENTER 	= fire a bullet
+SPACE	= jump
+A       = look up
+Y       = look down
+ESC     = quit
+
+The map editor I included isn't the original version by Derek J. Evans, but it is mostly his code.  It's essentially the modified version that comes with the GP32 source by Gazin Matthieu (aka ThunderZ), except I compiled it with my slightly altered engine code.  In a few of the files, I had to change quad_t to Quad_t because of a conflict I encountered when compiling on my Mac, and matrix_t has been changed to matrx_t by Vortexx because of a conflict with KallistiOS on the Dreamcast.  The reason I used the ThunderZ's map editor is in my opinion a good one: You can load your own texture and palette files.  By the time I get around to releasing this I'll hopefully remember to include some tools to convert your own bitmaps into texture/palette files.  If there's a 'tools' folder included here, look in there for some freeware/open source goodies that I found on the net to help you make your own custom maps.  If I forgot to include this, a google search for "Yeti GP32" should provide some good links.
+
+I've noticed a bit of a glitch in the editor - when you go to change a floor, wall, or ceiling texture, you'll often get an annoying popup (only when using the default textures) saying "Division by Zero."  I find that this is easilly resolved by loading a new texture & palette file.
+
+I'll be including a Dreamcast example here as well, just to show that you can use SDL on the DC for rendering your worlds.  The SDL version I have put together makes use of Yeti's viewport_to_video function, which converts the 15-bit viewport to match your actual display mode (16-bit in our case).  This works well on Windows and OS X, but I've found that function slows things up a bit on the Dreamcast.  I believe I've found a way around this which should be fairly fast (at least at a low resolution, and not using SDL), but I don't have the code ready for public view yet.  Hopefully I'll have that ready before long -- I wanted to get a SDL version done for my own use on the PC first and once it worked, I wanted to share.
+
+Please note that the DC version of this demo requires a keyboard just like the Windows and Mac versions.
+
+I'm also working on some tools of my own for turning a bitmap file into a sprite_t array for use with the engine.  Again, that's almost done but not ready for general consumption yet.  It calculates all the values correctly, but I've got to pretty up the GUI and beat it into shape a bit more so it makes the whole sprites.c file.
+
+Thanks for downloading, thanks for reading, now go make some damn games!  (and let me play them)
+
+		-138  4/9/2004
